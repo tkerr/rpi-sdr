@@ -1,0 +1,29 @@
+##############################################################################
+# my_station.txt
+# Configuration parameters for spyserver, radiosonde_auto_rx, and chasemapper
+# Chasemapper support not completely implemented yet - still a work in progress
+##############################################################################
+
+##############################################################################
+# radiosonde_auto_rx configuration parameters.
+##############################################################################
+
+uploader_callsign=N0CALL
+uploader_antenna=none
+
+station_lat = 40.516838
+station_lon = -79.676988
+station_alt = 366.0
+
+sondehub_contact_email=none@arrl.net
+
+##############################################################################
+# chasemapper configuration parameters.
+##############################################################################
+
+habitat_upload_enabled = False
+habitat_call = N0CALL
+default_lat = 40.516838
+default_lon = -79.676988
+default_alt = 366.0
+unitselection = imperial
