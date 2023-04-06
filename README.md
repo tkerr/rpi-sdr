@@ -17,7 +17,8 @@ Note that some knowledge of Linux and Raspberry Pi is assumed.
 - Antenna suitable for the 400-406 MHz frequency range
 
 ### 1.2 Software Needed
-- The pre-built RTL-SDR Automatic Radiosonde Receiver Image located here: (TBD)
+- The pre-built RTL-SDR Automatic Radiosonde Receiver Image located here:  
+https://www.dropbox.com/s/fhf1u3avguq0pas/2023-03-23-rpi-sdr.img.xz?dl=0  
 
 ### 1.3 Configuration Information Needed
 You will need the following information to customize your station:
