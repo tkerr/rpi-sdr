@@ -1,6 +1,5 @@
 # config_my_station.py
-# Python script to configure radiosonde_auto_rx and chasemapper
-# Designed for use on a Raspberry Pi
+# Python script to configure radiosonde_auto_rx and chasemapper.
 
 import os
 import re
