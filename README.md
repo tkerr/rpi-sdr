@@ -7,6 +7,8 @@ Once installed and set up properly, it will run [radiosonde_auto_rx](https://git
 
 In addition, a [web interface](https://github.com/projecthorus/radiosonde_auto_rx/wiki/Web-Interface-Guide) is available over the local network that provides a way of seeing the live status of your station, and also a means of reviewing and analyzing previous radiosonde flights. Collected meteorological data can be plotted in the common 'Skew-T' format. 
 
+See the Quick Start Guide in Section 1 below to get your station up and running.
+
 ## Table of Contents
 1.    [Quick Start Guide](#quick-start-guide)  
 1.1   [Hardware Needed](#hardware-needed)  
@@ -125,8 +127,7 @@ The download page is here: https://www.raspberrypi.com/software
    Open `wpa_supplicant.conf` in a text editor.  
    Replace "YOURSSID" with your wireless network SSID (in quotes).  
    Replace "YOURPASSWORD" with your wireless network password (in quotes).  
-   Save the file and exit.     
-   **Note:** This file is deleted upon first boot, so the plain text password is removed from the Raspberry Pi.  
+   Save the file and exit.      
 
 ### 1.7 Hardware Setup <a name="hardware-setup"></a>
  
