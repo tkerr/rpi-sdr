@@ -7,7 +7,9 @@ Once installed and set up properly, it will run [radiosonde_auto_rx](https://git
 
 In addition, a [web interface](https://github.com/projecthorus/radiosonde_auto_rx/wiki/Web-Interface-Guide) is available over the local network that provides a way of seeing the live status of your station, and also a means of reviewing and analyzing previous radiosonde flights. Collected meteorological data can be plotted in the common 'Skew-T' format. 
 
-See the Quick Start Guide in Section 1 below to get your station up and running.
+All setup and configuration can be done from a Windows PC.  You don't need to log in to the Raspberry Pi or compile any code for the initial setup.  
+See the Quick Start Guide in Section 1 below to get your station up and running.  
+See Section 2 if you want do dive a litte deeper into the details.  
 
 ## Table of Contents
 1.    [Quick Start Guide](#quick-start-guide)  
@@ -35,7 +37,7 @@ See the Quick Start Guide in Section 1 below to get your station up and running.
 
 ## 1. Quick Start Guide <a name="quick-start-guide"></a>  
 Follow these instructions to get your station up and running.  
-Note that some knowledge of Windows, Linux and Raspberry Pi is assumed.  
+Note that some knowledge of Windows and Raspberry Pi is assumed.  
 
 ### 1.1 Hardware Needed <a name="hardware-needed"></a>  
 - [Raspberry Pi 3/4](https://www.raspberrypi.com/) with power supply  
@@ -52,8 +54,8 @@ You will need to download this image to your local PC - Note that the file size 
 You will need the following information to customize your station:  
 - Your wireless network name and password  
 - Your station callsign (or other identifier) to display  
-- Your station latitude in decimal degrees (e.g., 30.70178)  
-- Your station longitude in decimal degrees (e.g., -83.94209)  
+- Your station latitude in decimal degrees (e.g., 39.699843)  
+- Your station longitude in decimal degrees (e.g., -83.938752)  
 - Your station (or antenna) altitude in meters (e.g., 285.0)  
 - An e-mail address where the SondeHub website admins can reach you  
 
@@ -120,7 +122,7 @@ The download page is here: https://www.raspberrypi.com/software
    Edit this file with your station configuration information (callsign, coordinates, e-mail address, etc.).  
    Set the `upload_listener_position` parameter to `True`.  
    Save the file and exit.  
-   **Note:** If this file is not present, copy `my_station.txt.bak` to `my_station.txt` and edit it.  
+   **Note:** If the `my_station.txt` file is not present, copy `my_station.txt.bak` to `my_station.txt` and edit it.  
 
 5. **Configure the wireless network:**   
    Copy `wpa_supplicant.conf.bak` to `wpa_supplicant.conf`.  
@@ -155,11 +157,13 @@ You are welcome and encouraged to modify, customize, and experiment with them an
 #### 2.1.1 Linux <a name="linux"></a>  
 This image was built from `Linux 5.15.84-v8+ #1613 SMP PREEMPT Thu Jan 5 12:03:08 GMT 2023`  
 
+Default login information is provided in Section 1.3 above.  
+
 Summary of modifications:
   - Set the hostname to `rpi-sdr` and the default user to `rpi`
   - Added radiosonde_auto_rx as a systemd service so that it starts automatically on boot
   - Modified `/etc/systemd/journald.conf` to limit the number of systemd journals to 100 files and a total size of 100 MB
-  - Modified `/etc/rc.local` to run `/home/rpi/boot_auto_rx_config.sh` on startup
+  - Modified `/etc/rc.local` to run `/home/rpi/boot_auto_rx_config.sh` on startup.  This script checks for the `my_station.txt` file on the boot partition, and uses it to configure the station if found.  
   - Installed the packages described below according to their instructions
   - Added some Bash and Python scripts to `/home/rpi` to facilitate auto configuration and starting/stopping applications
 
