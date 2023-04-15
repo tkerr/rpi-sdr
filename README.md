@@ -263,4 +263,4 @@ See: https://airspy.com
 
 
 ## 4. Licensing Information <a name="licenses"></a>   
-All software on the pre-built Raspberry Pi image is licensed by their individual copyright holders.  See the Raspberry Pi website and each application website for details.  No additional licenses are asserted here.  
+All software on the pre-built Raspberry Pi image is licensed by their individual copyright holders.  See the Raspberry Pi website and each application website for details.  Refer this repositories LICENSE file for additional information.
