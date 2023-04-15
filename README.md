@@ -47,7 +47,7 @@ Note that some knowledge of Windows and Raspberry Pi is assumed.
 
 ### 1.2 Software Needed <a name="software-needed"></a>  
 - The pre-built RTL-SDR Automatic Radiosonde Receiver Image located here:  
-https://www.dropbox.com/s/321jm0zb874m2iu/2023-04-07-rpi-sdr.img.xz?dl=0  
+https://www.dropbox.com/s/29p6vh8hqa2qa2m/2023-04-15-rpi-sdr.img.xz?dl=0  
 You will need to download this image to your local PC - Note that the file size is 1.2 GB  
 
 ### 1.3 Configuration Information Needed <a name="config-info-needed"></a>  
@@ -135,7 +135,7 @@ The download page is here: https://www.raspberrypi.com/software
  
 1. Insert the SD card into the Raspberry Pi.  
 2. Connect the RTL-SDR dongle and antenna.
-3. Power on the Raspberry Pi. It will automatically start radiosonde_auto_rx and begin searching for radiosondes.
+3. Power on the Raspberry Pi. It will automatically start radiosonde_auto_rx and begin searching for radiosondes.  The first boot with a new SD card will take some time while the file system expands to fit the card.
 
 ### 1.8 Automatic Radiosonde Receiver Operation <a name="automatic-operation"></a>
 Upon boot, the radiosonde_auto_rx application is started automatically. No user intervention is needed.  
