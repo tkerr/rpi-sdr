@@ -8,7 +8,8 @@
 # radiosonde_auto_rx configuration parameters.
 ##############################################################################
 
-# Change the next line to True when station configuration parameters are set.
+# Change the next line to True (case sensitive!) when station configuration 
+# parameters are set.
 upload_listener_position=False
 
 uploader_callsign=N0CALL

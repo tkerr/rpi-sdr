@@ -47,8 +47,8 @@ Note that some knowledge of Windows and Raspberry Pi is assumed.
 
 ### 1.2 Software Needed <a name="software-needed"></a>  
 - The pre-built RTL-SDR Automatic Radiosonde Receiver Image located here:  
-https://www.dropbox.com/s/29p6vh8hqa2qa2m/2023-04-15-rpi-sdr.img.xz?dl=0  
-You will need to download this image to your local PC - Note that the file size is 1.2 GB  
+https://www.dropbox.com/scl/fi/8tvo4vkd44ar3fgo6kzqs/2023-10-10-rpi-sonde.img.xz?rlkey=iquluja5slma2z61zbhek1drq&dl=0  
+You will need to download this image to your local PC - Note that the file size is 1.6 GB  
 
 ### 1.3 Configuration Information Needed <a name="config-info-needed"></a>  
 You will need the following information to customize your station:  
@@ -60,7 +60,7 @@ You will need the following information to customize your station:
 - An e-mail address where the SondeHub website admins can reach you  
 
 Raspberry Pi login information:  
-- Hostname: `rpi-sdr`  
+- Hostname: `rpi-sonde`  
 - Username: `rpi`  
 - Password: `12345678`  
 
@@ -120,7 +120,7 @@ The download page is here: https://www.raspberrypi.com/software
 4. **Customize your station:**  
    Open `my_station.txt` in a text editor (Notepad or equivalent).  
    Edit this file with your station configuration information (callsign, coordinates, e-mail address, etc.).  
-   Set the `upload_listener_position` parameter to `True`.  
+   Set the `upload_listener_position` parameter to `True` (case sensitive!).  
    Save the file and exit.  
    **Note:** If the `my_station.txt` file is not present, copy `my_station.txt.bak` to `my_station.txt` and edit it.  
 
@@ -142,7 +142,7 @@ Upon boot, the radiosonde_auto_rx application is started automatically. No user 
 It will scan the 400 - 406 MHz frequency range for radiosonde signals. When a signal is found, it will decode packets on that frequency.  When no packets are detected for 3 minutes, scanning will resume.  Packets will be sent to the [SondeHub Tracker website](https://tracker.sondehub.org) at regular intervals.  
 
 A web interface that displays a sonde position map and decoded packets is available on port 5000 on the local network. From another computer, enter one of the following URLs in a browser:
-- http://rpi-sdr.local:5000/
+- http://rpi-sonde.local:5000/
 - http://XYZ:5000/ (replace XYZ with the Raspberry Pi's IP address)   
 
 [Click here](https://github.com/projecthorus/radiosonde_auto_rx/wiki/Web-Interface-Guide) for the web user interface guide.   
@@ -155,12 +155,12 @@ You are welcome and encouraged to modify, customize, and experiment with them an
 ### 2.1 Packages provided with this image <a name="packages-provided"></a>  
 
 #### 2.1.1 Linux <a name="linux"></a>  
-This image was built from `Linux 5.15.84-v8+ #1613 SMP PREEMPT Thu Jan 5 12:03:08 GMT 2023`  
+This image was built from `Linux 6.1.21-v8+ #1642 SMP PREEMPT Mon Apr  3 17:24:16 BST 2023`  
 
 Default login information is provided in Section 1.3 above.  
 
 Summary of modifications:
-  - Set the hostname to `rpi-sdr` and the default user to `rpi`
+  - Set the hostname to `rpi-sonde` and the default user to `rpi`
   - Added radiosonde_auto_rx as a systemd service so that it starts automatically on boot
   - Modified `/etc/systemd/journald.conf` to limit the number of systemd journals to 100 files and a total size of 100 MB
   - Modified `/etc/rc.local` to run `/home/rpi/boot_auto_rx_config.sh` on startup.  This script checks for the `my_station.txt` file on the boot partition, and uses it to configure the station if found.  
@@ -212,7 +212,7 @@ Note that cell phone bands in the 600 - 850 MHz range will work, but bands in th
 
 #### 2.2.3 SPY Server <a name="spyserver"></a>   
 The RTL-SDR dongle can be used as a high performance SDR receiver capable of streaming separate chunks of the spectrum to multiple clients over the LAN or the Internet. SPY Server is an SDR server that can be used by SDR# ("SDR-Sharp") over a network on port 5555.  When SPY Server is running on this machine, SDR# clients can connect to it over the local network using this machine's IP address or host name, for example:  
-  - sdr://rpi-sdr.local:5555  
+  - sdr://rpi-sonde.local:5555  
   - sdr://XYZ:5555  (replace XYZ with the Raspberry Pi's IP address)  
 
 Information on SPY Server and SDR# can be found on the Airspy website:  
@@ -263,4 +263,4 @@ See: https://airspy.com
 
 
 ## 4. Licensing Information <a name="licenses"></a>   
-All software on the pre-built Raspberry Pi image is licensed by their individual copyright holders.  See the Raspberry Pi website and each application website for details.  Refer this repositories LICENSE file for additional information.
+All software on the pre-built Raspberry Pi image is licensed by their individual copyright holders.  See the Raspberry Pi website and each application website for details.  Refer to this repository's LICENSE file for additional information.
