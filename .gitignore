@@ -1,5 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+images/rpi-imager-1.7.4/
+
 *.py[cod]
 *$py.class
 
