@@ -11,6 +11,14 @@ All setup and configuration can be done from a Windows PC.  You don't need to lo
 See the Quick Start Guide in Section 1 below to get your station up and running.  
 See Section 2 if you want do dive a litte deeper into the details.  
 
+## Changelog  
+#### 2023-03-24
+- Pre-built image: `2024-03-24-rpi-sonde.img.xz` 
+  -- Includes RTL-SDR V4 driver  
+  -- Supports Radiosonde Auto-RX 1.7.2  
+- Instructions support Raspberry Pi Imager v1.8.5  
+
+
 ## Table of Contents
 1.    [Quick Start Guide](#quick-start-guide)  
 1.1   [Hardware Needed](#hardware-needed)  
@@ -40,15 +48,16 @@ Follow these instructions to get your station up and running.
 Note that some knowledge of Windows and Raspberry Pi is assumed.  
 
 ### 1.1 Hardware Needed <a name="hardware-needed"></a>  
-- [Raspberry Pi 3/4](https://www.raspberrypi.com/) with power supply  
+- [Raspberry Pi 3/4/5](https://www.raspberrypi.com/) with power supply  
 - [RTL-SDR dongle](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide)  
 - Micro SD card in the range 8GB - 64GB  
 - Antenna suitable for the 400-406 MHz frequency range  
 
 ### 1.2 Software Needed <a name="software-needed"></a>  
 - The pre-built RTL-SDR Automatic Radiosonde Receiver Image located here:  
-https://www.dropbox.com/scl/fi/8tvo4vkd44ar3fgo6kzqs/2023-10-10-rpi-sonde.img.xz?rlkey=iquluja5slma2z61zbhek1drq&dl=0  
-You will need to download this image to your local PC - Note that the file size is 1.6 GB  
+https://www.dropbox.com/scl/fi/f5el392g9gnou3hew7234/2024-03-24-rpi-sonde.img.xz?rlkey=ywmumf9hdnjjxgro792vc5dpu&dl=0
+
+You will need to download this image to your local PC - Note that at least 2.1 GB of disk space is needed.  
 
 ### 1.3 Configuration Information Needed <a name="config-info-needed"></a>  
 You will need the following information to customize your station:  
@@ -76,37 +85,38 @@ The download page is here: https://www.raspberrypi.com/software
 
    <img src="./images/RaspberryPiImagerMain.jpg" alt="Raspberry Pi Imager" width="480"/>  
 
-4. Click the **CHOOSE OS** button.  
+4. Click the **CHOOSE DEVICE** button.  
+   Select the Raspberry Pi device you are using.  
+   
+5. Click the **CHOOSE OS** button.  
    Scroll down and click the **Use custom** option.  
    Navigate to the folder containing the pre-built image downloaded in Step 1 and select it.  
 
    <img src="./images/RaspberryPiImagerChooseOS.jpg" alt="Choose OS" width="480"/>  
 
-5. Click the **CHOOSE STORAGE** button.  
+6. Click the **CHOOSE STORAGE** button.  
    Select the Micro SD card inserted in Step 2.  
 
    <img src="./images/RaspberryPiImagerChooseStorage.jpg" alt="Choose Storage" width="480"/>  
 
-6. An *Advanced Options* button with a gear icon will appear on the main window. Click it.  
-   Select Image customization options **to always use**.  
-   Uncheck all customization options. Scroll down to make sure all options are unchecked.  
-   Leave the boxes in *Persistent Settings* checked.  
-   Click **SAVE**   
+7. Click the **NEXT** button.
+   A dialog box will appear with the question *Would you like to apply OS customisation settings?"  
+   Click **NO**    
 
-   <img src="./images/RaspberryPiImagerAdvanced.jpg" alt="Advanced Options" width="480"/>  
-
-7. Click the **WRITE** button.  An "*Are you sure you want to continue?*" warning message will be displayed. Click **YES**.  
+   <img src="./images/RaspberryPiImagerCustomisation.jpg" alt="Customisation Options" width="480"/>  
+   
+   A warning will appear that all existing data will be erased.  Click **YES** to continue.  
    The imager will write the image to the SD card and verify it.  
-   When complete, a *Write Successful* message box will appear.  
+
+8. When complete, a *Write Successful* message box will appear.  
    Remove the SD card and click **CONTINUE**.  
    Close the Raspberry Pi Imager application.  
    
    <img src="./images/RaspberryPiImagerComplete.jpg" alt="Write Successful" width="480"/> 
 
-8. A Windows File Explorer window may open with an error message saying that a drive is not accessible. This error can be ignored and dismissed.
+9. A Windows File Explorer window may open with an error message saying that a drive is not accessible. This error can be ignored and dismissed.
 
-   <img src="./images/LocationNotAvailable.jpg" alt="Location Not Available" />
-
+   <img src="./images/LocationNotAvailable.jpg" alt="Location Not Available" />  
 
 ### 1.6 Station Customization <a name="station-customization"></a>
 
