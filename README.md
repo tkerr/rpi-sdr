@@ -11,14 +11,6 @@ All setup and configuration can be done from a Windows PC.  You don't need to lo
 See the Quick Start Guide in Section 1 below to get your station up and running.  
 See Section 2 if you want do dive a litte deeper into the details.  
 
-## Changelog  
-#### 2023-03-24
-- Pre-built image: `2024-03-24-rpi-sonde.img.xz`  
-  -- Includes RTL-SDR V4 driver  
-  -- Supports Radiosonde Auto-RX 1.7.2  
-- Instructions support Raspberry Pi Imager v1.8.5  
-
-
 ## Table of Contents
 1.    [Quick Start Guide](#quick-start-guide)  
 1.1   [Hardware Needed](#hardware-needed)  
@@ -43,12 +35,17 @@ See Section 2 if you want do dive a litte deeper into the details.
 3.    [References and Additional Links](#references)  
 4.    [Licensing Information](#licenses)  
 
+## Note: Not Compatible with Raspberry Pi 5  
+The pre-built image will not boot on a Raspberry Pi 5.  
+See the following forum post: https://forums.raspberrypi.com/viewtopic.php?t=362449  
+
+
 ## 1. Quick Start Guide <a name="quick-start-guide"></a>  
 Follow these instructions to get your station up and running.  
 Note that some knowledge of Windows and Raspberry Pi is assumed.  
 
 ### 1.1 Hardware Needed <a name="hardware-needed"></a>  
-- [Raspberry Pi 3/4/5](https://www.raspberrypi.com/) with power supply  
+- [Raspberry Pi 3/4](https://www.raspberrypi.com/) with power supply  
 - [RTL-SDR dongle](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide)  
 - Micro SD card in the range 8GB - 64GB  
 - Antenna suitable for the 400-406 MHz frequency range  
@@ -100,7 +97,7 @@ The download page is here: https://www.raspberrypi.com/software
    <img src="./images/RaspberryPiImagerChooseStorage.jpg" alt="Choose Storage" width="480"/>  
 
 7. Click the **NEXT** button.
-   A dialog box will appear with the question *Would you like to apply OS customisation settings?"  
+   A dialog box will appear with the question *Would you like to apply OS customisation settings?*  
    Click **NO**    
 
    <img src="./images/RaspberryPiImagerCustomisation.jpg" alt="Customisation Options" width="480"/>  
