@@ -52,9 +52,9 @@ Note that some knowledge of Windows and Raspberry Pi is assumed.
 
 ### 1.2 Software Needed <a name="software-needed"></a>  
 - The pre-built RTL-SDR Automatic Radiosonde Receiver Image located here:  
-https://www.dropbox.com/scl/fi/f5el392g9gnou3hew7234/2024-03-24-rpi-sonde.img.xz?rlkey=ywmumf9hdnjjxgro792vc5dpu&dl=0
+https://www.dropbox.com/scl/fi/uxa8pc8b30azd3uf3j51x/2024-10-06-rpi-sonde.img.xz?rlkey=vscpkmbrim3lupcv909qjpk69&dl=0  
 
-You will need to download this image to your local PC - Note that at least 2.1 GB of disk space is needed.  
+You will need to download this image to your local PC - Note that at least 2.3 GB of disk space is needed.  
 
 ### 1.3 Configuration Information Needed <a name="config-info-needed"></a>  
 You will need the following information to customize your station:  
